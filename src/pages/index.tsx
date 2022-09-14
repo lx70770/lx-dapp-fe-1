@@ -57,7 +57,7 @@ const App: React.FC = () => {
         <a href="https://twitter.com/" target="_blank">
           <img src={twitter} alt="" />
         </a>
-        <a href="https://twitter.com/" target="_blank">
+        <a href="https://opensea.io/" target="_blank">
           <img src={opensea} alt="" />
         </a>
       </div>
