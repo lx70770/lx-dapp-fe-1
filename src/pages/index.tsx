@@ -9,7 +9,7 @@ import styles from './styles.less'
 
 const App: React.FC = () => {
   const { account, isActive, isActiviting, connect, isNetworkNotSupport } = useWallet()
-  const { loading, mintLoading, mint, balance } = useLXMFERInfo()
+  const { loading, mintLoading, mint, balance, totalSupply } = useLXMFERInfo()
 
   const connectWallet = () => {
     if (MetaMaskOnboarding.isMetaMaskInstalled()) {
@@ -50,7 +50,7 @@ const App: React.FC = () => {
     <div className={styles.mint_wrap}>
       <div className={styles.mint_count}>
         <span>Supply</span>
-        <span>999/999</span>
+        <span>{totalSupply}/999</span>
       </div>
       <div className={styles.mint_button} onClick={firstButton}></div>
       <div className={styles.socal_button}>
