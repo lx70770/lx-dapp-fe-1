@@ -1,6 +1,5 @@
 import { JsonRpcProvider } from '@ethersproject/providers'
 import { AddEthereumChainParameter } from '@web3-react/types'
-import { URLS } from './chains'
 
 export const ETH_TEST_CHAIN_ID = 4
 export const ETH_MAINNET_CHAIN_ID = 1
@@ -29,9 +28,9 @@ const ethParams: AddEthereumChainParameter = {
   blockExplorerUrls: ['https://etherscan.io'],
 }
 
-export const LX_MFER_ADDRESS = '0xeBC1C15bd4e3c79EE1273f60b64Ad68d94076a6a'
+export const LX_MFER_ADDRESS = '0xDf66Dff5F4CAd5f9c194cBc8849E4033Fb0CEFB8'
 
-export const DEFAULT_JSON_PROVIDER = new JsonRpcProvider(URLS[3][0])
+export const DEFAULT_JSON_PROVIDER = new JsonRpcProvider()
 
 export const isProd = ENV === 'prod'
 
