@@ -49,9 +49,8 @@ const App: React.FC = () => {
         <span>999/999</span>
       </div>
       <div className={styles.tips}>
-        sold out <br />o to opensea to trade
+        sold out <br/> go to opensea to trade
       </div>
-      <div className={styles.tips1}>g</div>
       {/* <div className={styles.mint_button} onClick={firstButton}></div> */}
       <div className={styles.socal_button}>
         <a href="https://twitter.com/thenftisdead" target="_blank">
