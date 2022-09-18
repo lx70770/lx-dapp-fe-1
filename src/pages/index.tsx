@@ -1,64 +1,64 @@
-import { useLXMFERInfo } from '@/hooks/useLXMFERContract'
-import useWallet from '@/hooks/useWallet'
-import MetaMaskOnboarding from '@metamask/onboarding'
-import { message } from 'antd'
 import React from 'react'
-import opensea from '../assets/opensea.jpg'
+import ins from '../assets/ins.png'
 import twitter from '../assets/twitter.jpg'
 import styles from './styles.less'
 
 const App: React.FC = () => {
-  const { account, isActive, isActiviting, connect, isNetworkNotSupport } = useWallet()
-  const { loading, mintLoading, mint, balance, totalSupply } = useLXMFERInfo()
+  // const { account, isActive, isActiviting, connect, isNetworkNotSupport } = useWallet()
+  // const { loading, mintLoading, mint, balance, totalSupply } = useLXMFERInfo()
 
-  const connectWallet = () => {
-    if (MetaMaskOnboarding.isMetaMaskInstalled()) {
-      connect()
-    } else {
-      new MetaMaskOnboarding().startOnboarding()
-    }
-  }
+  // const connectWallet = () => {
+  //   if (MetaMaskOnboarding.isMetaMaskInstalled()) {
+  //     connect()
+  //   } else {
+  //     new MetaMaskOnboarding().startOnboarding()
+  //   }
+  // }
 
-  console.log(isActiviting)
-  console.log(loading)
+  // console.log(isActiviting)
+  // console.log(loading)
 
-  const firstButton = () => {
-    if (isActiviting || loading) {
-      message.warn('slow network, please wait a moment.')
-      return
-    }
+  // const firstButton = () => {
+  //   if (isActiviting || loading) {
+  //     message.warn('please wait a moment.')
+  //     return
+  //   }
 
-    if (!account || !isActive) {
-      connectWallet()
-      return
-    }
+  //   if (!account || !isActive) {
+  //     connectWallet()
+  //     return
+  //   }
 
-    if (isNetworkNotSupport) {
-      connectWallet()
-      message.warn('Network error, you need switch network.')
-      return
-    }
+  //   if (isNetworkNotSupport) {
+  //     connectWallet()
+  //     message.warn('Network error, you need switch network.')
+  //     return
+  //   }
 
-    if (Number(balance) > 0) {
-      message.warn('You already own an NFT')
-      return
-    }
-    mint(account)
-  }
+  //   if (Number(balance) > 0) {
+  //     message.warn('You already own an NFT')
+  //     return
+  //   }
+  //   mint(account)
+  // }
 
   return (
     <div className={styles.mint_wrap}>
       <div className={styles.mint_count}>
         <span>Supply</span>
-        <span>{totalSupply}/999</span>
+        <span>0/999</span>
       </div>
-      <div className={styles.mint_button} onClick={firstButton}></div>
+      <div className={styles.tips}>free mint is comming</div>
+      {/* <div className={styles.mint_button} onClick={firstButton}></div> */}
       <div className={styles.socal_button}>
-        <a href="https://twitter.com/" target="_blank">
+        <a href="https://twitter.com/thenftisdead" target="_blank">
           <img src={twitter} alt="" />
         </a>
-        <a href="https://opensea.io/" target="_blank">
+        {/* <a href="https://opensea.io/collection/nftisdead" target="_blank">
           <img src={opensea} alt="" />
+        </a> */}
+        <a href="https://www.instagram.com/thenftisdead" target="_blank">
+          <img src={ins} alt="" />
         </a>
       </div>
     </div>
