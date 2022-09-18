@@ -48,7 +48,7 @@ const App: React.FC = () => {
         <span>Supply</span>
         <span>0/999</span>
       </div>
-      <div className={styles.tips}>free mint is comming</div>
+      <div className={styles.tips}>free mint is coming</div>
       {/* <div className={styles.mint_button} onClick={firstButton}></div> */}
       <div className={styles.socal_button}>
         <a href="https://twitter.com/thenftisdead" target="_blank">
