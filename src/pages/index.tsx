@@ -1,6 +1,7 @@
 import React from 'react'
 import ins from '../assets/ins.png'
 import twitter from '../assets/twitter.jpg'
+import opensea from '../assets/opensea.jpg'
 import styles from './styles.less'
 
 const App: React.FC = () => {
@@ -46,17 +47,17 @@ const App: React.FC = () => {
     <div className={styles.mint_wrap}>
       <div className={styles.mint_count}>
         <span>Supply</span>
-        <span>0/999</span>
+        <span>999/999</span>
       </div>
-      <div className={styles.tips}>free mint is coming</div>
+      <div className={styles.tips}>sold out</div>
       {/* <div className={styles.mint_button} onClick={firstButton}></div> */}
       <div className={styles.socal_button}>
         <a href="https://twitter.com/thenftisdead" target="_blank">
           <img src={twitter} alt="" />
         </a>
-        {/* <a href="https://opensea.io/collection/nftisdead" target="_blank">
+        <a href="https://opensea.io/collection/nftisdead" target="_blank">
           <img src={opensea} alt="" />
-        </a> */}
+        </a>
         <a href="https://www.instagram.com/thenftisdead" target="_blank">
           <img src={ins} alt="" />
         </a>
