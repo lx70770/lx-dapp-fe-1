@@ -44,13 +44,6 @@ const App: React.FC = () => {
 
   return (
     <div className={styles.mint_wrap}>
-      <div className={styles.mint_count}>
-        <span>Supply</span>
-        <span>999/999</span>
-      </div>
-      <div className={styles.tips}>
-        sold out <br/> go to opensea to trade
-      </div>
       {/* <div className={styles.mint_button} onClick={firstButton}></div> */}
       <div className={styles.socal_button}>
         <a href="https://twitter.com/thenftisdead" target="_blank">
